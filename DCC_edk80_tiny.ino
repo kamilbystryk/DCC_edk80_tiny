@@ -115,12 +115,13 @@ boolean test = true;
 #define DccAckPin 3 //HW=5
 #define FunctionPin0 6//czesc wspolna //HW=8
 #define FunctionPin11 7 //koncowka 1 //HW=9
-#define FunctionPin12 8 //koncowka 2 //HW=11
-#define FunctionPin20 0
-#define FunctionPin21 1
+#define FunctionPin12 10 //koncowka 2 //HW=11
 
-
-const int Input1 = 10; //HW=13
+//atmega
+/*#define FunctionPin0 10//czesc wspolna //HW=8
+#define FunctionPin11 6 //koncowka 1 //HW=9
+#define FunctionPin12 9 //koncowka 2 //HW=11*/
+const int Input1 = 9; //HW=13
 
 Bounce bouncer = Bounce( Input1, 50 );
 
@@ -233,15 +234,13 @@ void setup()
   pinMode(FunctionPin11, OUTPUT);
   pinMode(FunctionPin12, OUTPUT);
   pinMode(Input1, INPUT_PULLUP);
-  pinMode(FunctionPin20, OUTPUT);
-  pinMode(FunctionPin21, OUTPUT);
 
-  analogWrite(FunctionPin0, 0);
 
-  digitalWrite(FunctionPin11, ACT);
-  digitalWrite(FunctionPin12, ACT);
-  digitalWrite(FunctionPin20, NACT);
-  digitalWrite(FunctionPin21, NACT);
+  analogWrite(FunctionPin0, 255);
+
+  analogWrite(FunctionPin11, 255);
+  analogWrite(FunctionPin12, 255);
+
   if (test)
   {
     Serial.begin(9600);
@@ -317,7 +316,7 @@ void setup()
     if (bitRead(f0cv60L, 1)) digitalWrite( FunctionPin11, NACT );
     if (bitRead(f0cv60L, 2)) digitalWrite( FunctionPin12, NACT );
   }
-  if (bitRead(number53, 4) == 1)
+  /*if (bitRead(number53, 4) == 1)
   {
     savekontaktron = true;
     Serial.println("init kontaktron");
@@ -385,12 +384,12 @@ void setup()
   else
   {
     savekontaktron = false;
-  }
-  if ( Dcc.getCV(62) == 0)
+  }*/
+  /*if ( Dcc.getCV(62) == 0)
   {
     DCactive = true;
     DriveAll(true, false);
-  }
+  }*/
   cv120 = Dcc.getCV(120);
   cv121 = Dcc.getCV(121);
   cv122 = Dcc.getCV(122);
@@ -496,7 +495,7 @@ void loop()
     if (!digitalRead(Input1) && ((millis() - lastbutton) > 1000))
     {
       lastbutton = millis();
-      ProceedReedSwitch();
+      
     }
   }
 

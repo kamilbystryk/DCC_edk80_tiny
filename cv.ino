@@ -220,7 +220,7 @@ void CVinit()
     reedLight = true;
   }
 
-  PWMvalue = Dcc.getCV(54);
+  PWMvalue = 255-Dcc.getCV(54);
   PWMvalue2 = 255-Dcc.getCV(233);
   PWMvalue3 = 255-Dcc.getCV(234);
   myAddress = Dcc.getCV(1);
