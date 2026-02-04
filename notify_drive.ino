@@ -73,7 +73,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             if (bitRead(cv120, 0) == 1) analogWrite( FunctionPin0, PWMvalue);
             if (bitRead(cv120, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
             if (bitRead(cv120, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
-
+            if (bitRead(cv120, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
           }
           f0 = true;
         }
@@ -85,7 +85,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             if (bitRead(cv120, 0) == 1) analogWrite( FunctionPin0, 255  );
             if (bitRead(cv120, 1) == 1) analogWrite( FunctionPin11, 255);
             if (bitRead(cv120, 2) == 1) analogWrite( FunctionPin12, 255);
-
+            if (bitRead(cv120, 3) == 1) analogWrite( FunctionPin13, 255);
             f0 = false;
           }
         }
@@ -100,6 +100,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv121, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv121, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv121, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f1 = true;
           }
@@ -114,6 +115,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv121, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv121, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv121, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f1 = false;
           }
@@ -129,6 +131,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv122, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv122, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv122, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f2 = true;
           }
@@ -143,6 +146,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv122, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv122, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv122, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f2 = false;
           }
@@ -157,6 +161,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv123, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv123, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv123, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f3 = true;
           }
@@ -171,6 +176,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv123, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv123, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv123, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f3 = false;
           }
@@ -185,6 +191,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv124, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv124, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv124, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f4 = true;
           }
@@ -199,6 +206,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv124, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv124, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv124, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f4 = false;
           }
@@ -215,6 +223,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv125, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv125, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv125, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f5 = true;
           }
@@ -229,6 +238,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv125, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv125, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv125, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f5 = false;
           }
@@ -242,6 +252,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv126, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv126, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv126, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f6 = true;
           }
@@ -255,6 +266,8 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv126, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv126, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv126, 3) == 1) analogWrite( FunctionPin13, 255);
+              
             }
             f6 = false;
           }
@@ -268,6 +281,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv127, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv127, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv127, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f7 = true;
           }
@@ -281,6 +295,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv127, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv127, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv127, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f7 = false;
           }
@@ -294,6 +309,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv128, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv128, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv128, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f8 = true;
           }
@@ -307,6 +323,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv128, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv128, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv128, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f8 = false;
           }
@@ -322,6 +339,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv129, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv129, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv129, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f9 = true;
           }
@@ -335,6 +353,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv129, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv129, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv129, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f9 = false;
           }
@@ -348,6 +367,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv130, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv130, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv130, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f10 = true;
           }
@@ -361,6 +381,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv130, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv130, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv130, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f10 = false;
           }
@@ -374,6 +395,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv131, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv131, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv131, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f11 = true;
           }
@@ -387,6 +409,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv131, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv131, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv131, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f11 = false;
           }
@@ -400,6 +423,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv132, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv132, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv132, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f12 = true;
           }
@@ -413,6 +437,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv132, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv132, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv132, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f12 = false;
           }
@@ -428,6 +453,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv133, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
               if (bitRead(cv133, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+              if (bitRead(cv133, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
             }
             f13 = true;
           }
@@ -441,6 +467,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
             {
               if (bitRead(cv133, 1) == 1) analogWrite( FunctionPin11, 255);
               if (bitRead(cv133, 2) == 1) analogWrite( FunctionPin12, 255);
+              if (bitRead(cv133, 3) == 1) analogWrite( FunctionPin13, 255);
             }
             f13 = false;
           }
@@ -467,6 +494,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
           {
             if (bitRead(cv140, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
             if (bitRead(cv140, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+            if (bitRead(cv140, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
           }
         }
         else
@@ -476,6 +504,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
           {
             if (bitRead(cv140, 1) == 1) analogWrite( FunctionPin11, 255);
             if (bitRead(cv140, 2) == 1) analogWrite( FunctionPin12, 255);
+            if (bitRead(cv140, 3) == 1) analogWrite( FunctionPin13, 255);
           }
         }
         break;
@@ -487,6 +516,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
           {
             if (bitRead(cv141, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
             if (bitRead(cv141, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+            if (bitRead(cv141, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
           }
         }
         else
@@ -496,6 +526,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
           {
             if (bitRead(cv141, 1) == 1) analogWrite( FunctionPin11, 255);
             if (bitRead(cv141, 2) == 1) analogWrite( FunctionPin12, 255);
+            if (bitRead(cv141, 3) == 1) analogWrite( FunctionPin13, 255);
           }
         }
         if (FuncState & FN_BIT_22)
@@ -505,6 +536,7 @@ void notifyDccFunc(uint16_t Addr, DCC_ADDR_TYPE AddrType, FN_GROUP FuncGrp, uint
           {
             if (bitRead(cv142, 1) == 1) analogWrite( FunctionPin11, PWMvalue2);
             if (bitRead(cv142, 2) == 1) analogWrite( FunctionPin12, PWMvalue3);
+            if (bitRead(cv142, 3) == 1) analogWrite( FunctionPin13, PWMvalue4);
           }
         }
         else
@@ -545,12 +577,14 @@ void DriveAll(bool value, bool ending)
     {
       digitalWrite(FunctionPin11, ACT);
       digitalWrite(FunctionPin12, ACT);
+      digitalWrite(FunctionPin13, ACT);
     }
   }
   else
   {
-    analogWrite( FunctionPin0, NACT);
+    analogWrite( FunctionPin0, 255);
     digitalWrite(FunctionPin11, 255);
     digitalWrite(FunctionPin12, 255);
+    digitalWrite(FunctionPin13, 255);
   }
 }

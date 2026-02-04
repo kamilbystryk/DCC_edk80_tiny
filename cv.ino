@@ -171,6 +171,7 @@ void notifyCVChange( uint16_t CV, uint8_t Value)
   if (CV == 232) locoS = Value;
   if (CV == 233) PWMvalue2 = 255-Value;
   if (CV == 234) PWMvalue3 = 255-Value;
+  if (CV == 235) PWMvalue4 = 255-Value;
 }
 
 void CVinit()
@@ -223,6 +224,7 @@ void CVinit()
   PWMvalue = 255-Dcc.getCV(54);
   PWMvalue2 = 255-Dcc.getCV(233);
   PWMvalue3 = 255-Dcc.getCV(234);
+  PWMvalue4 = 255-Dcc.getCV(235);
   myAddress = Dcc.getCV(1);
   if (Dcc.getCV(29) & 0b00100000)
   {

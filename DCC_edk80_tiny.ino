@@ -55,6 +55,7 @@ int PWMtemp = 255;
 int PWMvalue = 0;
 int PWMvalue2 = 0;
 int PWMvalue3 = 0;
+int PWMvalue4 = 0;
 byte locoH;
 byte locoL;
 byte locoS;
@@ -68,7 +69,7 @@ byte f0cv60L = 1;
 byte cv120 = 1;
 byte cv121 = 2;
 byte cv122 = 4;
-byte cv123 = 0;
+byte cv123 = 8;
 byte cv124 = 0;
 byte cv125 = 0;
 byte cv126 = 0;
@@ -116,7 +117,7 @@ boolean test = true;
 #define FunctionPin0 6//czesc wspolna //HW=8
 #define FunctionPin11 7 //koncowka 1 //HW=9
 #define FunctionPin12 10 //koncowka 2 //HW=11
-
+#define FunctionPin13 0 //HW 2
 //atmega
 /*#define FunctionPin0 10//czesc wspolna //HW=8
 #define FunctionPin11 6 //koncowka 1 //HW=9
@@ -161,7 +162,7 @@ CVPair FactoryDefaultCVs [] =
   {120, 1},
   {121, 2},
   {122, 4},
-  {123, 0},
+  {123, 8},
   {124, 0},
   {125, 0},
   {126, 0},
@@ -233,6 +234,7 @@ void setup()
 
   pinMode(FunctionPin11, OUTPUT);
   pinMode(FunctionPin12, OUTPUT);
+  pinMode(FunctionPin13, OUTPUT);
   pinMode(Input1, INPUT_PULLUP);
 
 
@@ -240,7 +242,7 @@ void setup()
 
   analogWrite(FunctionPin11, 255);
   analogWrite(FunctionPin12, 255);
-
+  analogWrite(FunctionPin13, 255);
   if (test)
   {
     Serial.begin(9600);
